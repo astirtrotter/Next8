@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99000000"/>
+
+    <RelativeLayout
+        android:id="@+id/task_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
+        android:layout_marginTop="@dimen/gap_large"
+        android:layout_marginBottom="@dimen/gap_large"
+        android:padding="@dimen/gap_small"
+        android:background="@android:color/holo_orange_light">
+        <!-- Title -->
+        <TextView
+            android:id="@+id/task_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/task_priority"
+            android:textSize="@dimen/font_normal"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:text="asdf"/>
+
+        <!-- Content -->
+        <TextView
+            android:id="@+id/task_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/task_title"
+            android:layout_toLeftOf="@+id/task_priority"
+            android:layout_marginTop="10dip"
+            android:layout_marginLeft="@dimen/gap_small"
+            android:layout_marginRight="@dimen/gap_small"
+            android:text="asdfasdfasdf\nasdfasdfasdf"
+            android:textSize="@dimen/font_small"
+            android:textColor="@android:color/black" />
+
+        <!-- Priority -->
+        <ImageView
+            android:id="@+id/task_priority"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/logo" />
+
+        <!-- Done button -->
+        <Button
+            android:id="@+id/task_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/task_content"
+            android:background="@android:color/holo_green_light"
+            android:text="Done it!"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:paddingLeft="@dimen/gap_normal"
+            android:paddingRight="@dimen/gap_normal"
+            android:onClick="onTaskDone"/>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/task_info"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/task_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/gap_normal"
+            android:paddingLeft="@dimen/gap_normal"
+            android:paddingRight="@dimen/gap_normal"
+            android:background="#2196f3"
+            android:text="Edit"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:onClick="onTaskEdit"/>
+
+        <Button
+            android:id="@+id/task_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/gap_normal"
+            android:paddingRight="@dimen/gap_normal"
+            android:background="@android:color/holo_red_light"
+            android:text="Back"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:onClick="onTaskBack"/>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,43 @@
+@startuml
+
+title Tasker - Package/Class Diagram
+
+package MobileApp <<Frame>> {
+
+    package global <<Folder>> {
+      class GlobalUtil
+    }
+    
+    package database <<Folder>> {
+      class Task
+      class TaskIndiv
+    }
+    
+    package ui <<Folder>> {
+        package fragments <<Folder>> {
+          class AddEditTaskFragment
+          class HomeFragment
+          class ListTasksFragment
+          class SettingFragment
+          class TaskFragment
+        }
+        
+        package dropdownlistview <<Folder>> {
+          class DynamicListView
+        }
+        
+        package slidemenu <<Folder>> {
+          class NavDrawerItem
+          class NavDrawerListAdapter
+        }
+        
+        class MainActivity
+        class TaskerApplication
+    }
+}
+
+package ParseDatabase <<Database>> {
+  class tasks
+}
+
+@enduml

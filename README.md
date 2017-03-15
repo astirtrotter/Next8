@@ -1,2 +1,2 @@
 # Next8
-Android tasker app
+Android offline tasker app based on Sqlite.

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:background="#d8edf3">
+
+    <TextView
+        android:id="@+id/add_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add a New Task"
+        android:textAlignment="center"
+        android:textSize="@dimen/font_normal"
+        android:textColor="@android:color/holo_blue_dark"/>
+
+    <EditText
+        android:id="@+id/add_input_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/add_title"
+        android:layout_marginTop="@dimen/gap_large"
+        android:hint="Title of task (e.g. book holiday)"
+        android:inputType="textAutoComplete"/>
+    <EditText
+        android:id="@+id/add_input_content"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@id/add_input_title"
+        android:layout_marginTop="@dimen/gap_small"
+        android:gravity="start|top"
+        android:hint="Describe what needs to be done (e.g. check flights online, check accommodation, line up and confirm/pay)"
+        android:inputType="textMultiLine|textFilter"/>
+
+    <Button
+        android:id="@+id/add_priority"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_input_content"
+        android:layout_marginTop="@dimen/gap_normal"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="@dimen/gap_normal"
+        android:paddingRight="@dimen/gap_normal"
+        android:background="#ff6f00"
+        android:text="When"
+        android:textColor="#ffe538"
+        android:textStyle="bold"
+        android:onClick="onAddWhen"/>
+
+    <Button
+        android:id="@+id/add_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_priority"
+        android:layout_marginTop="@dimen/gap_normal"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="@dimen/gap_normal"
+        android:paddingRight="@dimen/gap_normal"
+        android:background="#2196f3"
+        android:text="Add"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:onClick="onAddAdd"/>
+
+</RelativeLayout>

@@ -1,0 +1,26 @@
+@startuml
+
+title Database Structure Diagram
+
+
+skinparam componentStyle uml2
+
+package ParseDatabase <<Database>> {
+    class tasks {
+      -- Used Fields --
+      + userID : String (phone id)
+      + taskID : Number (current time)
+      + title : String
+      + content : String
+      + priority : Number ( 1 ~ 4 )
+      + state : Number (1: pending, 2: done)
+      + rank : Number
+      -- Unused Fields --
+      - objectId : String
+      - createdAt : Date
+      - updatedAt : Date
+      - ACL : ACL
+    }
+}
+
+@enduml

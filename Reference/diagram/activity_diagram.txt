@@ -1,0 +1,26 @@
+@startuml
+
+title Tasker - Activity Diagram 
+
+
+start
+
+:Start;
+
+:Load task list;
+
+:Prepare slide menu;
+
+fork
+    :Add task;
+fork again
+    :List tasks;
+    :View each task;
+    :Edit;
+end fork
+
+:End;
+
+stop
+
+@enduml
